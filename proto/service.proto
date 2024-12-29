@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package jtconfig;
+
+service configService {
+    rpc getConfig ( configRequest ) returns ( configResponse ); 
+}
+
+message configRequest {
+    string key = 1; 
+}
+
+message configResponse {
+    string value = 1; 
+}
